@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/art/study/semester_3/OOP/mycode/lab_1/Figure.h
+
+/home/art/study/semester_3/OOP/mycode/lab_1/Pentagon.h
+cstdlib
+-
+iostream
+-
+Figure.h
+/home/art/study/semester_3/OOP/mycode/lab_1/Figure.h
+
+/home/art/study/semester_3/OOP/mycode/lab_1/Rhombus.h
+cstdlib
+-
+iostream
+-
+Figure.h
+/home/art/study/semester_3/OOP/mycode/lab_1/Figure.h
+
+/home/art/study/semester_3/OOP/mycode/lab_1/Trapeze.h
+cstdlib
+-
+iostream
+-
+Figure.h
+/home/art/study/semester_3/OOP/mycode/lab_1/Figure.h
+
+/home/art/study/semester_3/OOP/mycode/lab_1/main.cpp
+cstdlib
+-
+iostream
+-
+Trapeze.h
+/home/art/study/semester_3/OOP/mycode/lab_1/Trapeze.h
+Rhombus.h
+/home/art/study/semester_3/OOP/mycode/lab_1/Rhombus.h
+Pentagon.h
+/home/art/study/semester_3/OOP/mycode/lab_1/Pentagon.h
+
