@@ -7,6 +7,7 @@ Rhombus::Rhombus() : Rhombus(0,0) {
 }
 
 Rhombus::Rhombus(std::istream &is) {
+    std::cout << "Enter side and height:"<<std::endl;
     is >> side >> height;
 }
 
@@ -20,6 +21,7 @@ Rhombus::Rhombus(size_t side, size_t height): side(side), height(height) {
 }
 
 void Rhombus::Print() {
+    std::cout << "Rhombus:" <<std::endl;
     std::cout <<"side = " << side << ", height = " << height << std::endl;
 }
 

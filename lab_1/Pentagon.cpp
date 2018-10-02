@@ -7,6 +7,7 @@ Pentagon::Pentagon() : Pentagon(0,0) {
 }
 
 Pentagon::Pentagon(std::istream &is) {
+    std::cout << "Enter side and apothem:"<<std::endl;
     is >> side >> apothem;
 }
 
@@ -20,6 +21,7 @@ Pentagon::Pentagon(size_t side, size_t apothem): side(side), apothem(apothem) {
 }
 
 void Pentagon::Print() {
+    std::cout << "Pentagon:" <<std::endl;
     std::cout <<"side = " << side << ", apothem = " << apothem << std::endl;
 }
 

@@ -7,6 +7,7 @@ Trapeze::Trapeze() : Trapeze(0,0,0) {
 }
 
 Trapeze::Trapeze(std::istream &is) {
+    std::cout << "Enter first base, second base and height:"<<std::endl;
     is >> base_a >> base_b >> height;
 }
 
@@ -21,6 +22,7 @@ Trapeze::Trapeze(size_t base_a, size_t base_b, size_t height): base_a(base_a), b
 }
 
 void Trapeze::Print() {
+    std::cout << "Trapeze:" <<std::endl;
     std::cout <<"first base = " << base_a << ", second base = " << base_b << ", height = " << height << std::endl;
 }
 

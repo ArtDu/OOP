@@ -21,36 +21,15 @@ int main(int argc, char** argv) {
         }
         switch (option) {
             case '1':{
-                std::cout << "Enter first base, second base and height:"<<std::endl;
                 ptr = new Trapeze(std::cin);
-                std::cout << "Trapeze:" <<std::endl;
-                ptr->Print();
-                std::cout << "Square of Trapeze: " << std::endl;
-                std::cout << ptr->Square() << std::endl;
-                delete ptr;
-
                 break;
             }
             case '2':{
-                std::cout << "Enter side and height:"<<std::endl;
                 ptr = new Rhombus(std::cin);
-                std::cout << "Rhombus:" <<std::endl;
-                ptr->Print();
-                std::cout << "Square of Rhombus: " << std::endl;
-                std::cout << ptr->Square() << std::endl;
-
-                delete ptr;
                 break;
             }
             case '3':{
-                std::cout << "Enter side and apothem:"<<std::endl;
                 ptr = new Pentagon(std::cin);
-                std::cout << "Pentagon:" <<std::endl;
-                ptr->Print();
-                std::cout << "Square of Pentagon: " << std::endl;
-                std::cout << ptr->Square() << std::endl;
-
-                delete ptr;
                 break;
             }
             default:{
@@ -59,6 +38,10 @@ int main(int argc, char** argv) {
             }
 
         }
+
+        ptr->Print();
+        std::cout << "Square:" << std::endl << ptr->Square() << std::endl;
+        delete ptr;
     }
 
 
