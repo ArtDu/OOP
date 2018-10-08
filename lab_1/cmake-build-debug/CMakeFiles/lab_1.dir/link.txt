@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/lab_1.dir/main.cpp.o CMakeFiles/lab_1.dir/Trapeze.cpp.o CMakeFiles/lab_1.dir/Rhombus.cpp.o CMakeFiles/lab_1.dir/Pentagon.cpp.o  -o lab_1 
