@@ -27,4 +27,4 @@ Pentagon.o: Pentagon.cpp Pentagon.h
 	$(CC) $(FLAGS) -c Pentagon.cpp
 
 clean:
-	rm -f $(SOURCES)
+	rm -f *.o

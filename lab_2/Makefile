@@ -22,4 +22,4 @@ Trapeze.o: Trapeze.cpp Trapeze.h
 
 
 clean:
-	rm -f $(SOURCES)
+	rm -f *.o
