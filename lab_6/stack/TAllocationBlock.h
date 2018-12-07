@@ -3,6 +3,10 @@
 #define	TALLOCATIONBLOCK_H
 
 #include <cstdlib>
+#include "TStackSnd.h"
+
+#include "TStackSnd.h"
+
 
 class TAllocationBlock {
 public:
@@ -18,6 +22,7 @@ private:
     
     char  *_used_blocks;
     void  **_free_blocks;
+    TStackSnd<void*> free_blocks_stack;
     
     size_t _free_count;
 

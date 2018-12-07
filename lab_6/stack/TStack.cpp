@@ -93,4 +93,5 @@ template <class T> TIterator<TStackItem<T>,T> TStack<T>::end()
 
 
 template class TStack<std::shared_ptr<Figure>>;
+
 template std::ostream& operator<<(std::ostream &os, const TStack<std::shared_ptr<Figure>>& stack);

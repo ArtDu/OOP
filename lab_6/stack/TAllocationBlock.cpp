@@ -1,13 +1,17 @@
 
 #include "TAllocationBlock.h"
+
 #include <iostream>
 
 TAllocationBlock::TAllocationBlock(size_t size,size_t count): _size(size),_count(count)  {
     _used_blocks = (char*)malloc(_size*_count);
-    _free_blocks = (void**)malloc(sizeof(void*)*_count);
+    //_free_blocks = (void**)malloc(sizeof(void*)*_count);
+
     
-    for(size_t i=0;i<_count;i++)
-        _free_blocks[i] = _used_blocks+i*_size;
+    for(size_t i=0;i<_count;i++) {
+        //_free_blocks[i] = _used_blocks+i*_size;
+        free_blocks_stack.push(_used_blocks+i*_size);
+    }
     _free_count = _count;
       std::cout << "TAllocationBlock: Memory init" << std::endl;
 }
@@ -17,7 +21,8 @@ void *TAllocationBlock::allocate() {
     
     if(_free_count>0)
     {
-        result = _free_blocks[_free_count-1];
+        result = free_blocks_stack.pop();
+        //result = _free_blocks[_free_count-1];
         _free_count--;
         std::cout << "TAllocationBlock: Allocate " << (_count-_free_count) << " of " << _count << std::endl;
     } else
@@ -31,8 +36,9 @@ void *TAllocationBlock::allocate() {
 
 void TAllocationBlock::deallocate(void *pointer) {
   std::cout << "TAllocationBlock: Deallocate block "<< std::endl;
-    
-  _free_blocks[_free_count] = pointer;
+
+  free_blocks_stack.push(pointer);
+  //_free_blocks[_free_count] = pointer;
   _free_count ++;
 
 }
@@ -45,7 +51,7 @@ TAllocationBlock::~TAllocationBlock() {
     
     if(_free_count<_count) std::cout << "TAllocationBlock: Memory leak?" << std::endl;
                     else  std::cout << "TAllocationBlock: Memory freed" << std::endl;
-    delete _free_blocks;
+    //delete _free_blocks;
     delete _used_blocks;
 }
 
