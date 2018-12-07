@@ -21,7 +21,6 @@ private:
     size_t _count;
     
     char  *_used_blocks;
-    void  **_free_blocks;
     TStackSnd<void*> free_blocks_stack;
     
     size_t _free_count;

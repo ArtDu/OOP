@@ -1,5 +1,5 @@
-#ifndef LISTS_TREMOVECRITERIAALL_H_
-#define LISTS_TREMOVECRITERIAALL_H_
+#ifndef TSTACKS_TREMOVECRITERIAALL_H_
+#define TSTACKS_TREMOVECRITERIAALL_H_
 
 #include "TRemoveCriteria.h"
 template<class T>
@@ -13,4 +13,4 @@ public:
 private:
 };
 
-#endif /* LISTS_TREMOVECRITERIAALL_H_ */
+#endif /* TSTACKS_TREMOVECRITERIAALL_H_ */

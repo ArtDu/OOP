@@ -50,7 +50,7 @@ bool TAllocationBlock::has_free_blocks() {
 TAllocationBlock::~TAllocationBlock() {
     
     if(_free_count<_count) std::cout << "TAllocationBlock: Memory leak?" << std::endl;
-                    else  std::cout << "TAllocationBlock: Memory freed" << std::endl;
+                    else  std::cout << "TAllocationBlock: Memory free" << std::endl;
     //delete _free_blocks;
     delete _used_blocks;
 }

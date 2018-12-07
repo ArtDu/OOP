@@ -1,5 +1,5 @@
-#ifndef LISTS_TREMOVECRITERIA_H_
-#define LISTS_TREMOVECRITERIA_H_
+#ifndef STACKS_TREMOVECRITERIA_H_
+#define STACKS_TREMOVECRITERIA_H_
 #include <memory>
 
 template<class T>
@@ -10,4 +10,4 @@ public:
 private:
 };
 
-#endif /* LISTS_TREMOVECRITERIA_H_ */
+#endif /* STACKS_TREMOVECRITERIA_H_ */
